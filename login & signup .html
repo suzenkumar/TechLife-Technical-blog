@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechLife | Login & Signup</title>
+    <link rel="shortcut icon" href="logo/Screenshot 2025-07-12 181513.png" type="techlife" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tab {
+            display: flex;
+        }
+
+        .tab button {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #eee;
+            border: none;
+            outline: none;
+            transition: background 0.3s ease;
+        }
+
+        .tab button.active {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        form {
+            display: none;
+            padding: 30px;
+        }
+
+        form.active {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button.submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button.submit-btn:hover {
+            background: #004c99;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            padding-bottom: 20px;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .google {
+            background-color: #db4437;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="tab">
+            <button class="tablinks active" onclick="switchTab(event, 'login')">Login</button>
+            <button class="tablinks" onclick="switchTab(event, 'signup')">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login" class="tabcontent active">
+            <h2>Login to TechLife</h2>
+            <input type="text" placeholder="Username or Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signup" class="tabcontent">
+            <h2>Create a TechLife Account</h2>
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm Password" required />
+            <button type="submit" class="submit-btn">Sign Up</button>
+
+            <div class="social-buttons">
+                <button type="button" class="social-btn google">
+                    <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" />
+                    Sign up with Google
+                </button>
+                <button type="button" class="social-btn facebook">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" />
+                    Sign up with Facebook
+                </button>
+                <button type="button" class="social-btn instagram">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" />
+                    Sign up with Instagram
+                </button>
+            </div>
+        </form>
+
+        <div class="footer-text">
+            &copy; 2025 TechLife. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function switchTab(evt, tabName) {
+            const tabcontent = document.querySelectorAll(".tabcontent");
+            const tablinks = document.querySelectorAll(".tablinks");
+
+            tabcontent.forEach(el => el.classList.remove("active"));
+            tablinks.forEach(el => el.classList.remove("active"));
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
