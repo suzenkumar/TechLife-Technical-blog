@@ -2,7 +2,7 @@
 
 Welcome to **Tech Life** – a modern web platform that brings you the latest in technology, gadgets, startups, and coding life. Stay informed, inspired, and engaged with the evolving world of tech.
 
-![Tech Life Screenshot](screenshot.png)
+![Tech Life Screenshot](https://github.com/suzenkumar/TechLife-Technical-blog/blob/main/Screenshot%202025-07-22%20222859.png)
 
 ## 🚀 Features
 
